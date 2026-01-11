@@ -49,8 +49,8 @@ function playGame() {
     let rounds = 0;
 
     while (rounds < 5) {
-        let humanSelection = getHumanChoice();
-        let computerSelection = getComputerChoice();
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
 
         const result = playRound(humanSelection, computerSelection);
 
