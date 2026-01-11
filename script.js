@@ -12,7 +12,7 @@ function getHumanChoice() {
 
     while (isItMistake) {
 
-        choice = prompt('Type you weapon: rock, paper or scissors').toLowerCase();
+        let choice = prompt('Type you weapon: rock, paper or scissors').toLowerCase();
 
         if (choice == "rock" || choice == "paper" || choice == "scissors") {
             return choice;
@@ -41,7 +41,7 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    rounds = 0;
+    let rounds = 0;
     while (rounds < 5) {
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
