@@ -8,9 +8,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let isItMistake = true;
-
-    while (isItMistake) {
+    while (true) {
 
         let choice = prompt('Type you weapon: rock, paper or scissors').toLowerCase();
 
