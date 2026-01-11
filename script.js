@@ -1,7 +1,5 @@
 let humanScore = 0;
 let computerScore = 0;
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
 function getComputerChoice() {
     let choices = ["rock", "paper", "scissors"];
@@ -42,5 +40,26 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-playRound(humanSelection, computerSelection);
-console.log(humanScore, computerScore);
+function playGame() {
+    rounds = 0;
+    while (rounds < 5) {
+        let humanSelection = getHumanChoice();
+        let computerSelection = getComputerChoice();
+
+        playRound(humanSelection, computerSelection);
+        console.log(`Human's score is ${humanScore} and Computer's score is ${computerScore}`);
+        rounds++;
+    }
+
+    if (humanScore > computerScore) {
+        console.log("You are winner, lucky bastard!!! 😔");
+    }
+    else if (humanScore < computerScore) {
+        console.log("You are looser. Taste my SILICON POWER!!! 😈");
+    }
+    else {
+        console.log("Unbelievable. IT IS DRAW!!! 😶");
+    }
+}
+
+playGame();
