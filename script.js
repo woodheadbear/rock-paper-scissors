@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let choices = ["rock", "paper", "scissors"];
     let choice = Math.round(Math.random() * (choices.length - 1));
@@ -18,6 +21,5 @@ function getHumanChoice() {
             console.log("You probably made a typo. Please try again.")
         }
     }
-
-
 }
+
