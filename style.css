@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url(/images/rps-bg.jpg) no-repeat center fixed;
+    background-size: cover;
+}
