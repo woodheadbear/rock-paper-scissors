@@ -22,16 +22,20 @@ function getHumanChoice() {
     }
 }
 
-function playRound(humanChoice, computerChoice) {
-    let humanWinsWithRock = humanChoice === "rock" && computerChoice === "scissors";
-    let humanWinsWithPaper = humanChoice === "paper" && computerChoice === "rock";
-    let humanWinsWithScissors = humanChoice === "scissors" && computerChoice === "paper"
+function humanWins(humanChoice, computerChoice) {
+    return (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+    );
+}
 
+function playRound(humanChoice, computerChoice) {
 
     if (humanChoice === computerChoice) {
         console.log(`Computer chose "${computerChoice}". You chose "${humanChoice}". It's draw! Whatever. 😕`)
     }
-    else if (humanWinsWithRock || humanWinsWithPaper || humanWinsWithScissors) {
+    else if (humanWins(humanChoice, computerChoice)) {
         console.log(`Computer chose "${computerChoice}". You chose "${humanChoice}". You win! Sheesh! 😬`);
         humanScore++;
     }
