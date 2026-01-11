@@ -1,9 +1,10 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const choices = ["rock", "paper", "scissors"];
+
 function getComputerChoice() {
-    let choices = ["rock", "paper", "scissors"];
-    let choice = Math.floor(Math.random() * (choices.length - 1));
+    let choice = Math.floor(Math.random() * choices.length);
     return choices[choice];
 }
 
@@ -12,7 +13,7 @@ function getHumanChoice() {
 
         let choice = prompt('Type you weapon: rock, paper or scissors').toLowerCase();
 
-        if (choice === "rock" || choice === "paper" || choice === "scissors") {
+        if (choices.includes(choice)) {
             return choice;
         }
         else {
@@ -22,13 +23,15 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
+    let humanWinsWithRock = humanChoice === "rock" && computerChoice === "scissors";
+    let humanWinsWithPaper = humanChoice === "paper" && computerChoice === "rock";
+    let humanWinsWithScissors = humanChoice === "scissors" && computerChoice === "paper"
+
+
     if (humanChoice === computerChoice) {
         console.log(`Computer chose "${computerChoice}". You chose "${humanChoice}". It's draw! Whatever. 😕`)
     }
-    else if (
-        (humanChoice === "rock" && computerChoice === "scissors") ||
-        (humanChoice === "paper" && computerChoice === "rock") ||
-        (humanChoice === "scissors" && computerChoice === "paper")) {
+    else if (humanWinsWithRock || humanWinsWithPaper || humanWinsWithScissors) {
         console.log(`Computer chose "${computerChoice}". You chose "${humanChoice}". You win! Sheesh! 😬`);
         humanScore++;
     }
