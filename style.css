@@ -4,6 +4,6 @@
 }
 
 body {
-    background: #ffffff url(images/rps-bg.jpg) no-repeat center fixed;
+    background: #ffffff url(./images/rps-bg.jpg) no-repeat center fixed;
     background-size: cover;
 }
