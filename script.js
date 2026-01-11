@@ -1,6 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
-
 const choices = ["rock", "paper", "scissors"];
 
 function getComputerChoice() {
@@ -34,24 +31,36 @@ function playRound(humanChoice, computerChoice) {
 
     if (humanChoice === computerChoice) {
         console.log(`Computer chose "${computerChoice}". You chose "${humanChoice}". It's draw! Whatever. 😕`)
+        return "draw";
     }
     else if (humanWins(humanChoice, computerChoice)) {
         console.log(`Computer chose "${computerChoice}". You chose "${humanChoice}". You win! Sheesh! 😬`);
-        humanScore++;
+        return "human";
     }
     else {
         console.log(`Computer chose "${computerChoice}". You chose "${humanChoice}". You lose! Muahahaha! 🤖`);
-        computerScore++;
+        return "computer";
     }
 }
 
 function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
     let rounds = 0;
+
     while (rounds < 5) {
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
 
-        playRound(humanSelection, computerSelection);
+        const result = playRound(humanSelection, computerSelection);
+
+        if (result === "human") {
+            humanScore++;
+        }
+        else if (result === "computer") {
+            computerScore++;
+        }
+
         console.log(`Human's score is ${humanScore} and Computer's score is ${computerScore}`);
         rounds++;
     }
