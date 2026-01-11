@@ -60,7 +60,7 @@ function playGame() {
         console.log("You are winner, lucky bastard!!! 😔");
     }
     else if (humanScore < computerScore) {
-        console.log("You are looser. Taste my SILICON POWER!!! 😈");
+        console.log("You are loser. Taste my SILICON POWER!!! 😈");
     }
     else {
         console.log("Unbelievable. IT IS DRAW!!! 😶");
