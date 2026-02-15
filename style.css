@@ -7,3 +7,8 @@ body {
     /* background: #ffffff url(./images/rps-bg.jpg) no-repeat center fixed; */
     background-size: cover;
 }
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
