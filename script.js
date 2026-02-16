@@ -88,7 +88,9 @@ function playGame() {
         }
     });
 
-    restart.addEventListener('click', () => {
+    restart.addEventListener('click', (e) => {
+        restartButton = e.target.closest('button');
+        if(!restartButton) return;
         resetGame();
     });
 }
