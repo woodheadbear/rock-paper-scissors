@@ -80,11 +80,11 @@ function playGame() {
 
         if (humanScore === WINPOINTS) {
             endGame();
-            winner.textContent = "You are winner, lucky bastard!!! 😔";
+            winner.textContent = "You are winner, lucky bastard!!!";
         }
         else if (computerScore === WINPOINTS) {
             endGame();
-            winner.textContent = "You are loser. Taste my SILICON POWER!!! 😈";
+            winner.textContent = "You are loser. Taste my SILICON POWER!!!";
         }
     });
 
