@@ -1,4 +1,4 @@
-# Rock Paper Scissors console game
+# Rock Paper Scissors game
 
 ~~Console version of the famous game~~
 
