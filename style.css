@@ -4,11 +4,18 @@
 }
 
 body {
-    /* background: #ffffff url(./images/rps-bg.jpg) no-repeat center fixed; */
-    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+.game {
+    display: flex;
+
 }
